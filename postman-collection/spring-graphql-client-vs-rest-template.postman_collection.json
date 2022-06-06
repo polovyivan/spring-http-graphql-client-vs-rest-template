@@ -1,0 +1,968 @@
+{
+	"info": {
+		"_postman_id": "baa85424-65bc-4257-bfb6-c2e0ae01aae5",
+		"name": "spring-graphql-client-vs-rest-template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rest-client",
+			"item": [
+				{
+					"name": "/customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers-with-filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers-with-filters?fullName=Ivan Polovyi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers-with-filters"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Ivan Polovyi"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "626.164.7481",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2015-09-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Ivan Polovyi\",\n    \"phoneNumber\": \"831.259.2365\",\n    \"address\": \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"=Ivan\",\n    \"phoneNumber\": \"=931.259.2365\",\n    \"address\": \"=Bpt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "46d81c87-a87d-4723-9cc7-6bb28b7c4235"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"55555=931.259.2365\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "46d81c87-a87d-4723-9cc7-6bb28b7c4235"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"=931.259.2365\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Rueben Purdy",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "893-087-1038",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2016-01-30",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "46d81c87-a87d-4723-9cc7-6bb28b7c4235"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "graphql-client",
+			"item": [
+				{
+					"name": "/customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-graphql-client/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-graphql-client",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers-with-filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-graphql-client/customers-with-filters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-graphql-client",
+								"customers-with-filters"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Petronila Kuhn",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "626.164.7481",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2015-09-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Ivan Polovyi\",\n    \"phoneNumber\": \"831.259.2365\",\n    \"address\": \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-rest-client/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-rest-client",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"88888Ivan\",\n    \"phoneNumber\": \"=931.259.2365\",\n    \"address\": \"=Bpt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-graphql-client/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-graphql-client",
+								"customers",
+								":customerId"
+							],
+							"query": [
+								{
+									"key": "fullName",
+									"value": "Rueben Purdy",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "893-087-1038",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "2016-01-30",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "c3900b1e-3093-4a2d-b601-08e61ee89989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"=931.259.2365\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-graphql-client/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-graphql-client",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "c3900b1e-3093-4a2d-b601-08e61ee89989"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/spring-graphql-client/v1/for-graphql-client/customers/:customerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"spring-graphql-client",
+								"v1",
+								"for-graphql-client",
+								"customers",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "c3900b1e-3093-4a2d-b601-08e61ee89989"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "producer",
+			"item": [
+				{
+					"name": "rest",
+					"item": [
+						{
+							"name": "/customers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/customers-with-filters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/v1/customers-with-filters",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"v1",
+										"customers-with-filters"
+									],
+									"query": [
+										{
+											"key": "fullName",
+											"value": "Ivan Polovyi",
+											"disabled": true
+										},
+										{
+											"key": "phoneNumber",
+											"value": "893-087-1038",
+											"disabled": true
+										},
+										{
+											"key": "createdAt",
+											"value": "2016-01-30",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/customers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullName\": \"Ivan Polovyi\",\n    \"phoneNumber\": \"831.259.2365\",\n    \"address\": \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/v1/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/customers",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullName\": \"=Ivan\",\n    \"phoneNumber\": \"=931.259.2365\",\n    \"address\": \"=Bpt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/v1/customers/:customerId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"v1",
+										"customers",
+										":customerId"
+									],
+									"variable": [
+										{
+											"key": "customerId",
+											"value": "35dbad1d-7acc-4f3b-ba01-e737394b8bb5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/customers",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phoneNumber\": \"931.259.2365\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/v1/customers/:customerId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"v1",
+										"customers",
+										":customerId"
+									],
+									"query": [
+										{
+											"key": "fullName",
+											"value": "Rueben Purdy",
+											"disabled": true
+										},
+										{
+											"key": "phoneNumber",
+											"value": "893-087-1038",
+											"disabled": true
+										},
+										{
+											"key": "createdAt",
+											"value": "2016-01-30",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "customerId",
+											"value": "35dbad1d-7acc-4f3b-ba01-e737394b8bb5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/customers",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/v1/customers/:customerId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"v1",
+										"customers",
+										":customerId"
+									],
+									"variable": [
+										{
+											"key": "customerId",
+											"value": "35dbad1d-7acc-4f3b-ba01-e737394b8bb5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "graphql",
+					"item": [
+						{
+							"name": "getAllCustomers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query {\n    getAllCustomers {\n                id\n                fullName \n                phoneNumber\n                address\n                createdAt\n\n                }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCustomersWithFilters",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query ($fullName : String\n       $phoneNumber : String\n       $createdAt : Date ){\n       getAllCustomersWithFilters(fullName: $fullName\n                                  phoneNumber : $phoneNumber\n                                  createdAt : $createdAt) {\n                                                            id\n                                                            fullName \n                                                            phoneNumber\n                                                            address\n                                                            createdAt\n                                                          }\n}",
+										"variables": "{\n    \"fullName\": null,\n    \"phoneNumber\" : null,\n    \"createdAt\" : null,\n    \"paymentType\" : null\n}"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createCustomer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation {\n    createCustomer (createCustomerRequest : {\n                            fullName  : \"Ivan Polovyi\"\n                            phoneNumber : \"831.259.2365\"\n                            address : \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n    }) {\n        id\n        fullName \n        phoneNumber\n        address\n        createdAt\n    }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createCustomers (with variables)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation ($createCustomerRequest : CreateCustomerRequest) {\n    createCustomer (createCustomerRequest : $createCustomerRequest)\n    {\n        id\n        fullName \n        phoneNumber\n        address\n        createdAt\n    }\n}",
+										"variables": "{\n    \"createCustomerRequest\": {\n         \"fullName\"  : \"Ivan Polovyi\",\n         \"phoneNumber\" : \"831.259.2365\",\n         \"address\" : \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n    }\n}\n\n"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateCustomer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation {\n    updateCustomer (\n        customerId : \"3684a06e-60d9-41be-bb76-de73373a7bef\"\n        updateCustomerRequest : {\n                            fullName  : \"Ivan Bogisich1\"\n                            phoneNumber : \"+831.259.2365\"\n                            address : \"Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n    }){\n        id\n        fullName \n        phoneNumber\n        address\n        createdAt\n       }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateCustomers (with variables)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation ($updateCustomerRequest : UpdateCustomerRequest\n           $customerId : String) {\n    updateCustomer (\n        customerId : $customerId\n        updateCustomerRequest : $updateCustomerRequest)\n    {\n        id\n        fullName \n        phoneNumber\n        address\n        createdAt\n    }\n} ",
+										"variables": "{\n    \"customerId\" : \"3684a06e-60d9-41be-bb76-de73373a7bef\",\n    \"updateCustomerRequest\": {\n         \"fullName\"  : \"Ivan Polovyi\",\n         \"phoneNumber\" : \"=831.259.2365\",\n         \"address\" : \"=Apt. 843 399 Lachelle Crossing, New Eldenhaven, LA 63962-9260\"\n    }\n}\n\n"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "partiallyUpdateCustomer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation {\n    partiallyUpdateCustomer (\n        customerId : \"3684a06e-60d9-41be-bb76-de73373a7bef\"\n        partiallyUpdateCustomerRequest : {\n                                 phoneNumber : \"931.259.2365\"\n    })\n    {\n        id\n        fullName \n        phoneNumber\n        address\n        createdAt\n    }\n} ",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "partiallyUpdateCustomer (with variables)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation ($partiallyUpdateCustomerRequest : PartiallyUpdateCustomerRequest\n           $customerId : String) {\n    partiallyUpdateCustomer (\n        customerId : $customerId\n        partiallyUpdateCustomerRequest : $partiallyUpdateCustomerRequest)\n    {\n        id\n        fullName \n        phoneNumber\n        address\n        createdAt\n    }\n}\n",
+										"variables": "{\n    \"customerId\" : \"3684a06e-60d9-41be-bb76-de73373a7bef\",\n    \"partiallyUpdateCustomerRequest\": {\n         \"phoneNumber\" : \"831.259.2365\"\n    }\n}\n\n"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteCustomer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation {\n    deleteCustomer (\n        customerId : \"85c6cf92-8883-4fe6-afbd-de15f8e39e7f\")\n} ",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteCustomer (with variables)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation ( $customerId : String) {\n    deleteCustomer (\n        customerId : $customerId\n       )\n}\n",
+										"variables": "{\n    \"customerId\" : \"05de723f-8101-4583-8c57-dc1e7850d61b\"\n   \n}\n\n"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/spring-graphql-producer/customers-graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"spring-graphql-producer",
+										"customers-graphql"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

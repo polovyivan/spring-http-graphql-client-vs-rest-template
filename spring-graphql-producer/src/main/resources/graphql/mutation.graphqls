@@ -1,0 +1,38 @@
+scalar Date
+
+type Mutation {
+     createCustomer (createCustomerRequest : CreateCustomerRequest) : CustomerResponse
+
+     updateCustomer (customerId : String
+                     updateCustomerRequest : UpdateCustomerRequest) : CustomerResponse
+
+     partiallyUpdateCustomer (customerId : String
+                              partiallyUpdateCustomerRequest : PartiallyUpdateCustomerRequest ) : CustomerResponse
+
+     deleteCustomer (customerId : String) : String
+}
+
+type CustomerResponse {
+      id : String
+      fullName : String
+      phoneNumber : String
+      address : String
+      createdAt : Date
+      purchaseTransactions
+}
+
+input CreateCustomerRequest {
+      fullName : String
+      phoneNumber : String
+      address : String
+}
+
+input UpdateCustomerRequest {
+      fullName : String
+      phoneNumber : String
+      address : String
+}
+
+input PartiallyUpdateCustomerRequest {
+      phoneNumber : String
+}
